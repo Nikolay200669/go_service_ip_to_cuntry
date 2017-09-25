@@ -106,7 +106,7 @@ point:
 		}
 
 	} else {
-		fmt.Fprintf(ctx, "You coutry: %s\nYou IP: %s", res.Country, ip)
+		fmt.Fprintf(ctx, "You country: %s\nYou IP: %s", res.Country, ip)
 	}
 
 	ctx.SetContentType("text/plain; charset=utf8")
