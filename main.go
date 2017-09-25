@@ -17,8 +17,8 @@ import (
 
 // Config : structure
 var Config = struct {
-	Addr       string `default:"0.0.0.0"`
-	Port       string `default:"8888"`
+	Addr       string   `default:"0.0.0.0"`
+	Port       string   `default:"8888"`
 	Freqsec    string   `default:"10"`
 	Validityip string   `default:"600"`
 	Services   []string `default:"[http://ip-api.com/json/]"`
@@ -74,8 +74,10 @@ func requestHandler(ctx *fasthttp.RequestCtx) {
 	if err != nil {
 		log.Println(err)
 	}
+	log.Println("IP:", ctx.RemoteIP())
 
-	ip := "8.8.8.8"
+	ip := ctx.RemoteIP().String()
+	// ip := "8.8.8.8"
 	// ip := "8.8.4.4"
 	var res Country
 point:
@@ -104,7 +106,7 @@ point:
 		}
 
 	} else {
-		fmt.Fprintf(ctx, "%s", res.Country)
+		fmt.Fprintf(ctx, "You coutry: %s\nYou IP: %s", res.Country, ip)
 	}
 
 	ctx.SetContentType("text/plain; charset=utf8")
