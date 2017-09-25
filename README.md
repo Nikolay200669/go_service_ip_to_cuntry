@@ -9,6 +9,8 @@
 * Edit config `vim config.yml`,
 * Run `$go run main.go` or `$go build && ./test`.
 
+See the picture `task.png`
+
 ### Description config file (config.yml)
 
     addr: listen IP (example: 0,0,0,0)
