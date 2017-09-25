@@ -1,0 +1,10 @@
+addr: 0.0.0.0
+port: 8888
+freqsec: 10
+validityip: 10
+services: ["http://ip-api.com/json/", "http://geoip.nekudo.com/api/", "http://freegeoip.net/json/"]
+db:
+    name:     test
+    user:     root
+    password: 622265
+    port:     3306
