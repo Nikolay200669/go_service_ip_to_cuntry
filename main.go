@@ -169,7 +169,7 @@ func getDataByIP(ip string) string {
 		// fmt.Println("> 3")
 
 	default:
-		res = "nil"
+		res = "All servers busy. Waiting time approx... " + Config.Freqsec
 	}
 	defer conn.Close()
 	defer resp.Body.Close()
