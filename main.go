@@ -17,9 +17,8 @@ import (
 
 // Config : structure
 var Config = struct {
-	Addr       string
-	Port       string
-	Urlgeoip   string
+	Addr       string `default:"0.0.0.0"`
+	Port       string `default:"8888"`
 	Freqsec    string   `default:"10"`
 	Validityip string   `default:"600"`
 	Services   []string `default:"[http://ip-api.com/json/]"`
