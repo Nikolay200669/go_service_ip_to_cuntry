@@ -6,5 +6,5 @@ services: ["http://ip-api.com/json/", "http://geoip.nekudo.com/api/", "http://fr
 db:
     name:     test
     user:     root
-    password: 622265
+    password: xxx
     port:     3306
